@@ -12,6 +12,14 @@ const routes = [
         }
     },
     {
+        path: '/admin',
+        name: 'adminLogin',
+        component: () => import('@/views/AdminLogin.vue'),
+        meta: {
+            title: '後台登入'
+        }
+    },
+    {
         path: '/backstage',
         name: 'backstage',
         component: BackstageView,
