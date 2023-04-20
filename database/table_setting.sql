@@ -64,7 +64,7 @@ CREATE TABLE addresses (
     user_id VARCHAR(100) NOT NULL, -- 用戶 ID（外鍵）
     name VARCHAR(100) NOT NULL, -- 收貨人姓名
     phone VARCHAR(100) NOT NULL, -- 收貨人電話
-    address VARCHAR(100) NOT NULL, -- 收貨人地址
+    address VARCHAR(200) NOT NULL, -- 收貨人地址
     created_at DATETIME, -- 地址創建時間
     updated_at DATETIME, -- 地址更新時間
     PRIMARY KEY (id)
