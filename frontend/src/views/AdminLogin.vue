@@ -29,6 +29,7 @@ import "../modules/vanta/three.min.js"
 import "../modules/vanta/vanta.globe.min.js"
 import { apiUrl } from '@/assets/apiUrl.js'
 import { setCookie } from '@/assets/func/cookieFunc.js'
+import getJwtToken from "@/assets/func/getJwtToken.js"
 
 let account = ''
 let password = ''
@@ -78,7 +79,14 @@ const userLogin = async () => {
 
 }
 
-onMounted(() => {
+onMounted(async () => {
+
+    // 如果已經登入過，就跳到後台首頁
+    const jwtToken = await getJwtToken()
+    if (jwtToken !== null) {
+        router.push('/backstage')
+    }
+
     VANTA.GLOBE({
         el: "#background",
         mouseControls: true,

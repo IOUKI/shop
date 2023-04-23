@@ -1,17 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router"
-import FrontDeskView from '@/views/FrontDesk.vue'
-import BackstageView from '@/views/Backstage.vue'
-import FrontDeskMainView from '@/views/frontDesk/Main.vue'
 
 const routes = [
     {
         path: '/',
         name: 'home',
-        component: FrontDeskView,
+        component: () => import('@/views/FrontDesk.vue'),
         children: [
             {
                 path: '',
-                component: FrontDeskMainView,
+                component: () => import('@/views/frontDesk/Main.vue'),
                 meta: {
                     title: '首頁'
                 },
@@ -29,10 +26,16 @@ const routes = [
     {
         path: '/backstage',
         name: 'backstage',
-        component: BackstageView,
-        meta: {
-            title: '後台首頁'
-        }
+        component: () => import('@/views/Backstage.vue'),
+        children: [
+            {
+                path: '',
+                component: () => import('@/views/frontDesk/Main.vue'),
+                meta: {
+                    title: '首頁'
+                },
+            },
+        ]
     }
 ]
 

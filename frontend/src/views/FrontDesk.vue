@@ -23,10 +23,3 @@ onMounted(() => {
 })
 
 </script>
-
-<style>
-body {
-    background-image: url('@/assets/images/wave.jpg');
-    background-repeat: no-repeat;
-}
-</style>
