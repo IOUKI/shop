@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-auto">
         <!-- Sidebar Toggle start -->
-        <div class=" dark:bg-gray-900">
+        <div class="dark:bg-gray-900">
             <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar"
                 aria-controls="separator-sidebar" type="button"
                 class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -14,9 +14,7 @@
                 </svg>
             </button>
         </div>
-        <!-- Siedbar Toggle end -->
         <Sidebar></Sidebar>
-        <!-- <test /> -->
         <router-view></router-view>
     </div>
 </template>

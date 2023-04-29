@@ -31,7 +31,7 @@
             </ul>
             <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
                 <li>
-                    <a @click="toggleDark()" data-drawer-hide="separator-sidebar" aria-controls="separator-sidebar"
+                    <a @click="toggleDark()"
                         class="flex items-center p-2 text-gray-900 cursor-pointer transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
 
                         <div v-if="isDark">

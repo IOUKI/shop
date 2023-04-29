@@ -11,15 +11,10 @@
 <script setup>
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
-import { useDark, useToggle } from '@vueuse/core'
 import Navbar from '@/components/frontDesk/Navbar.vue'
 import Footer from '@/components/frontDesk/Footer.vue'
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
 
 onMounted(() => {
     initFlowbite()
 })
-
 </script>

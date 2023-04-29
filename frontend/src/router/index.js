@@ -30,7 +30,7 @@ const routes = [
         children: [
             {
                 path: '',
-                component: () => import('@/views/frontDesk/Main.vue'),
+                component: () => import('@/views/backstage/Main.vue'),
                 meta: {
                     title: '首頁'
                 },
