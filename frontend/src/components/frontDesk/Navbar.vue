@@ -1,12 +1,13 @@
 <template>
     <nav class="bg-white w-full fixed border-gray-200 dark:bg-gray-900 z-50">
-        <div class="max-w-screen-xl  flex flex-wrap items-center justify-between mx-auto p-4">
-            <router-link :to="{ name: 'frontDeskHome' }">
-                <a class="flex items-center">
-                    <img src="@/assets/bottle.png" class="h-8 mr-3" alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MyShop</span>
-                </a>
-            </router-link>
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <!-- 網站標題 -->
+            <a href="/" class="flex items-center">
+                <img src="@/assets/bottle.png" class="h-8 mr-3" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MyShop</span>
+            </a>
+
+            <!-- 搜尋欄 -->
             <div class="flex md:order-2">
                 <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
                     aria-expanded="false"
@@ -29,10 +30,12 @@
                         </svg>
                         <span class="sr-only">Search icon</span>
                     </div>
-                    <input type="text" id="search-navbar"
+                    <input type="text"
                         class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Search...">
                 </div>
+
+                <!-- 開關navbar -->
                 <button data-collapse-toggle="navbar-search" type="button"
                     class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-search" aria-expanded="false">
@@ -46,6 +49,8 @@
                     </svg>
                 </button>
             </div>
+
+            <!-- 網站連結項目 -->
             <div class="items-center justify-between hidden w-full h-screen md:h-auto md:flex md:w-auto md:order-1"
                 id="navbar-search">
                 <div class="relative mt-3 md:hidden">
@@ -57,13 +62,13 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <input type="text" id="search-navbar"
+                    <input type="text"
                         class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Search...">
                 </div>
                 <ul
                     class="flex flex-col items-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
+                    <li data-collapse-toggle="navbar-search">
                         <a href="#"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             全部商品
@@ -99,7 +104,7 @@
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">關於我們</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="/login"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             會員登入
                         </a>

@@ -13,6 +13,22 @@ const routes = [
                     title: '首頁'
                 },
             },
+            {
+                path: 'login',
+                name: 'frontDeskLogin',
+                component: () => import('@/views/frontDesk/Login.vue'),
+                meta: {
+                    title: '會員登入'
+                },
+            },
+            {
+                path: 'register',
+                name: 'frontDeskRegister',
+                component: () => import('@/views/frontDesk/Register.vue'),
+                meta: {
+                    title: '會員註冊'
+                },
+            },
         ]
     },
     {
