@@ -3,11 +3,11 @@ import { createRouter, createWebHistory } from "vue-router"
 const routes = [
     {
         path: '/',
-        name: 'home',
         component: () => import('@/views/FrontDesk.vue'),
         children: [
             {
                 path: '',
+                name: 'frontDeskHome',
                 component: () => import('@/views/frontDesk/Main.vue'),
                 meta: {
                     title: '首頁'
@@ -25,11 +25,11 @@ const routes = [
     },
     {
         path: '/backstage',
-        name: 'backstage',
         component: () => import('@/views/Backstage.vue'),
         children: [
             {
                 path: '',
+                name: 'backstageHome',
                 component: () => import('@/views/backstage/Main.vue'),
                 meta: {
                     title: '首頁'
