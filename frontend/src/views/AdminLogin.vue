@@ -67,6 +67,8 @@ const userLogin = async () => {
         })
     })
 
+    console.log(await response.json())
+
     if (response.status === 200) {
         const data = await response.json()
         setCookie('jwtToken', data["accessToken"])

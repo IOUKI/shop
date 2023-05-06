@@ -20,6 +20,9 @@ app.use(morgan('dev'))
 app.use(express.json())
 
 // routes
+app.get('/api', (req, res, next) => {
+    res.send('shop API Server')
+})
 app.use('/api/adminUser', require('./routes/adminUser.js'))
 
 // route error handle

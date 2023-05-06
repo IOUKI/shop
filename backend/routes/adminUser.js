@@ -16,6 +16,7 @@ router.post('/login', async (req, res, next) => {
         const { account, password } = req.body 
 
         const result = await userQuery.selectAdminUserContent(account)
+        console.log(result)
         const id = result[0]["id"]
         const title = result[0]["title"]
         const hashKey = result[0]["hash_key"]
